@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- fontawesom css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <div class="container-fluid">
+            <div class="row">
+              <!-- sidebar -->
+              <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top bg-dark">
+                <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">CodeAndCreate</a>
+                <div class="bottom-border pb-3">
+                  <img src="img/admin.jpeg" width="50" class="rounded-circle mr-3">
+                  <a href="#" class="text-white ">Helen Smith</a>
+                </div>
+                <ul class="navbar-nav flex-column mt-4">
+                  <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 current"><i class="fas fa-home text-light fa-lg mr-3"></i>Dashboard</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Profile</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-envelope text-light fa-lg mr-3"></i>Inbox</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-shopping-cart text-light fa-lg mr-3"></i>Sales</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-chart-line text-light fa-lg mr-3"></i>Analytics</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-chart-bar text-light fa-lg mr-3"></i>Charts</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-table text-light fa-lg mr-3"></i>Tables</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-wrench text-light fa-lg mr-3"></i>Settings</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-file-alt text-light fa-lg mr-3"></i>Documentation</a></li>
+                </ul>
+              </div>
+              <!-- end of sidebar -->
+  
+              <!-- top-nav -->
+              <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark fixed-top py-2 top-navbar">
+                <div class="row align-items-center">
+                  <div class="col-md-4">
+                    <h4 class="text-light text-uppercase mb-0">Dashboard</h4>
+                  </div>
+                  <div class="col-md-5">
+                    <form>
+                      <div class="input-group">
+                        <input type="text" class="form-control search-input" placeholder="Search...">
+                        <button type="button" class="btn btn-white search-button"><i class="fas fa-search text-danger"></i></button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-3">
+                    <ul class="navbar-nav">
+                      <li class="nav-item icon-parent"><a href="#" class="nav-link icon-bullet"><i class="fas fa-comments text-muted fa-lg"></i></a></li>
+                      <li class="nav-item icon-parent"><a href="#" class="nav-link icon-bullet"><i class="fas fa-bell text-muted fa-lg"></i></a></li>
+                      <li class="nav-item ml-md-auto"><a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out"><i class="fas fa-sign-out-alt text-danger fa-lg"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- end of top-nav -->
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- end of navbar -->
+  
+      <!-- modal -->
+      <div class="modal fade" id="sign-out">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Want to leave?</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              Press logout to leave
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Stay Here</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of modal -->
+  
+    <section>
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+            <div class="row pt-md-5 mt-md-3mb-5">
+                <div class="col-xl-3 col-sm-6 p-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <i class="fa fa-shopping-cart fa-3x text-warning" aria-label="false"></i>
+                                <div class="text-right">
+                                    <h5>Sales</h5>
+                                    <h3>$1000</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex pl-2">
+                            <i class="fa fa-sync mr-3" aria-hidden="false"></i>
+                            <span>Updated now</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 p-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <i class="fa fa-money-bill fa-3x text-success" aria-label="false"></i>
+                                <div class="text-right">
+                                    <h5>Sales</h5>
+                                    <h3>$1000</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex pl-2">
+                            <i class="fa fa-sync mr-3" aria-hidden="true"></i>
+                            <span>Updated now</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 p-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <i class="fa fa-users fa-3x text-info" aria-label="true"></i>
+                                <div class="text-right">
+                                    <h5>Sales</h5>
+                                    <h3>$1000</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex pl-2">
+                            <i class="fa fa-sync mr-3" aria-hidden="true"></i>
+                            <span>Updated now</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 p-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <i class="fa fa-chart-line fa-3x text-danger" aria-label="true"></i>
+                                <div class="text-right">
+                                    <h5>Sales</h5>
+                                    <h3>$1000</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex pl-2">
+                            <i class="fa fa-sync mr-3" aria-hidden="true"></i>
+                            <span>Updated now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="col-lg-10 col-sm-12 ml-auto">
+        <div class="container-fluid pt-2 mt-3">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 p-2">
+                    <table class="table table-striped bg-light mb-4 p-2 text-center text-muted">
+                        <h3 class="staff text-center text-muted">Staff Salary</h3>
+                        <thead>
+                            <tr>
+                                <td>#</td>
+                                <td>Name</td>
+                                <td>Salary</td>
+                                <td>Date</td>
+                                <td>Contact</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-info btn-sm">Message</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ann</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-info btn-sm">Message</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mark</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-info btn-sm">Message</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Mary</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-info btn-sm">Message</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Bob</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-info btn-sm">Message</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="pagination p-2 justify-content-center">
+                        <li class="page-item">
+                            <a href="#" class="page-link"><span>&laquo;</span>
+                                <span class="sr-only">Previous</span></a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link bg-primary text-white">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link"><span>&laquo;</span>
+                                <span class="sr-only">Next</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <table class="table table-striped bg-dark mb-4 p-2 text-center text-white">
+                        <h3 class="text-muted text-center">Recent Payments</h3>
+                        <thead>
+                            <tr>
+                                <td>#</td>
+                                <td>Name</td>
+                                <td>Salary</td>
+                                <td>Date</td>
+                                <td>Contact</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-sm">Approved</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ann</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-sm">Approved</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mark</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-danger btn-sm">Pending</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Mary</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-danger btn-sm">Pending</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Bob</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-sm">Approved</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Bob</td>
+                                <td>$2000</td>
+                                <td>25/05/2018</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-sm">Approved</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a href="#" class="page-link">Previous</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link bg-primary text-white">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a href="#" class="page-link">Next</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section>
+        <div class="col-lg-10 m-3">
+        <div class="container">
+            <div class="row">
+        <div class="col-lg-9"></div>
+        <div class="col-lg-3 ">
+            <h4 class="text-muted">Tasks:</h4>
+        </div>
+    </div>
+    </div>
+</div>
+    </section>
+    <section>
+        <div class="col-lg-10 col-sm-12 ml-auto">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 bg-dark text-white pr-4">
+                    <h4 class="py-4">Conversion Rates</h4>
+                    <div class="conversion">
+                    <h6 class="py-2">Google Chrome</h6>
+                    <div class="progress">
+                        <div class="progress progress-bar-striped bg-primary" style="width:91%">
+                            <h6 class="align-items-center">            91%</h6>
+                        </div>
+                    </div>
+                    <h6 class="py-2">Mozilla Firefox</h6>
+                    <div class="progress">
+                        <div class="progress progress-bar-striped bg-success" style="width:82%">
+                            <h6 class="align-items-center">82%</h6>
+                        </div>
+                    </div>
+                    <h6 class="py-2">Safari</h6>
+                    <div class="progress">
+                        <div class="progress progress-bar-striped bg-danger" style="width:67%">
+                            <h6 class="align-items-center">67%</h6>
+                        </div>
+                    </div>
+                    <h6 class="py-2">IE</h6>
+                    <div class="progress">
+                        <div class="progress progress-bar-striped bg-info" style="width:10%">
+                            <h6 class="align-items-center">10%</h6>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 pl-4">
+                    <div class="py-2 pt-2">
+                    <div class="borders d-flex px-3 bg-white">
+                        <i class="fa fa-check-square text-primary justify-content-center text-center align-items-center" aria-hidden="true"></i>
+                        <p class="para px-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, dolorum?</p>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="borders d-flex px-3 bg-white">
+                        <i class="fa fa-check-square text-primary justify-content-center text-center align-items-center" aria-hidden="true"></i>
+                        <p class="para px-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, dolorum?</p>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="borders d-flex px-3 bg-white">
+                        <i class="fa fa-check-square text-primary justify-content-center text-center align-items-center" aria-hidden="true"></i>
+                        <p class="para px-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, dolorum?</p>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="borders d-flex px-3 bg-white">
+                        <i class="fa fa-check-square text-primary justify-content-center text-center align-items-center" aria-hidden="true"></i>
+                        <p class="para px-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, dolorum?</p>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="borders d-flex px-3 bg-white">
+                        <i class="fa fa-check-square text-primary justify-content-center text-center align-items-center" aria-hidden="true"></i>
+                        <p class="para px-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, dolorum?</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class="col-lg-10 col-sm-12 ml-auto">
+        <div class="container-fluid">
+            <div class="row pt-4">
+                <div class="col-lg-7 col-sm-12 my-4 pl-0">
+                    
+                        <h4>Recent Customer Activities</h4>
+                        <div id="accordion">
+                           <div class="card">
+                               <div class="card-header">
+                                   <button class="text-left text-white btn-block d-flex bg-dark " data-toggle="collapse" data-target="#collapseone" data-parent="#accordion" aria-expanded="false" aria-controls="#collapseone">
+                                       <img src="img/cust1.jpeg" class="rounded" width="50">
+                                       <h6 class="pl-3 mt-2">John posted a new comment</h6>
+                                   </button>
+                               </div>
+                               <div class="collapse show" id="collapseone">
+                               <div class="card-body">
+                                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis esse officia, illo sapiente eligendi? Iste fuga, omnis veritatis, cupiditate, harum aliquam quas praesentium officia fugiat voluptatibus neque. Aspernatur, hic!</p>
+                               </div>
+                           </div> 
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <button class="text-left text-white btn-block d-flex bg-dark " data-toggle="collapse" data-target="#collapsetwo" data-parent="#accordion" aria-expanded="false" aria-controls="collapsetwo">
+                                    <img src="img/cust2.jpeg" class="rounded" width="50">
+                                    <h6 class="pl-3 mt-2">Mark posted a new comment</h6>
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapsetwo">
+                            <div class="card-body">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis esse officia, illo sapiente eligendi? Iste fuga, omnis veritatis, cupiditate, harum aliquam quas praesentium officia fugiat voluptatibus neque. Aspernatur, hic!</p>
+                            </div>
+                        </div> 
+                     </div>
+                     <div class="card">
+                        <div class="card-header">
+                            <button class="text-left text-white btn-block d-flex bg-dark " data-toggle="collapse" data-target="#collapsefour" data-parent="#accordion">
+                                <img src="img/cust4.jpeg" class="rounded" width="50">
+                                <h6 class="pl-3 mt-2">Vivien posted a new comment</h6>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapsefour">
+                        <div class="card-body">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis esse officia, illo sapiente eligendi? Iste fuga, omnis veritatis, cupiditate, harum aliquam quas praesentium officia fugiat voluptatibus neque. Aspernatur, hic!</p>
+                        </div>
+                    </div> 
+                 </div>
+                 <div class="card">
+                    <div class="card-header">
+                        <button class="text-left text-white btn-block d-flex bg-dark " data-toggle="collapse" data-target="#collapsefive" data-parent="#accordion">
+                            <img src="img/cust5.jpeg" class="rounded" width="50">
+                            <h6 class="pl-3 mt-2">Nick posted a new comment</h6>
+                        </button>
+                    </div>
+                    <div class="collapse" id="collapsefive">
+                    <div class="card-body">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis esse officia, illo sapiente eligendi? Iste fuga, omnis veritatis, cupiditate, harum aliquam quas praesentium officia fugiat voluptatibus neque. Aspernatur, hic!</p>
+                    </div>
+                </div> 
+             </div>
+             <div class="card">
+                <div class="card-header">
+                    <button class="text-left text-white btn-block d-flex bg-dark " data-toggle="collapse" data-target="#collapsesix" data-parent="#accordion">
+                        <img src="img/cust6.jpeg" class="rounded" width="50">
+                        <h6 class="pl-3 mt-2">Ann posted a new comment</h6>
+                    </button>
+                </div>
+                <div class="collapse" id="collapsesix">
+                <div class="card-body">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis esse officia, illo sapiente eligendi? Iste fuga, omnis veritatis, cupiditate, harum aliquam quas praesentium officia fugiat voluptatibus neque. Aspernatur, hic!</p>
+                </div>
+            </div> 
+         </div>
+                        
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12 mt-6 pt-5">
+                <div class="card rounded mt-4">
+                    <div class="card-body">
+                         <h4 class="text-center text-muted">Quick Status Post</h4>
+                        <ul class="list-inline px-3 mr-2 d-flex mt-3 text-center justify-content-center">
+                            <li class="list-inline-item d-flex px-2">
+                                <a href="#">
+                                    <i class="fa fa-chart-line  text-success" aria-hidden="true"></i>
+                                    <span class="h6 text-muted">Status</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item d-flex px-2 mt-0">
+                                <a href="#">
+                                    <i class="fa fa-camera text-info" class="bg-success" aria-hidden="true"></i>
+                                    <span class="h6 text-muted">Camera</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item d-flex px-2 mt-0">
+                                <a href="#">
+                                    <i class="fa fa-map-marker text-primary fa-w-12" aria-hidden="true"></i>
+                                    <span class="h6 text-muted">Check-in</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <form>
+                            <div class="form-group pt-2 mt-2">
+                                <input type="text" class="form-control py-2 mb-3" placeholder="Whats your status...">
+                                <button type="button" class="btn btn-block text-uppercase font-weight-bold text-light pt-2 mb-2 btn-info">Submit Post</button>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card bg-light">
+                                    <i class="fa fa-calendar fa-w-12 fa-8x py-2 d-block m-auto text-warning aria-hidden="true"></i>
+                                
+                                <div class="card-body">
+                                    <p class="card-text text-center font-weight-bold">MON, MAY 26</p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card bg-light">
+                                    <i class="fa fa-clock fa-w-12 fa-8x py-2 d-block m-auto text-danger bg-light "aria-hidden="true"></i>
+                                
+                                <div class="card-body">
+                                    <p class="card-text font-weight-bold text-center">3:50 AM</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+
+
+            </div>
+        </div>  
+        </div>
+    </div>
+    </section>
+    <footer>
+        <hr>
+        <div class="col-lg-10 ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="foot text-black h-50 d-flex ml-auto">
+                <a href="#" class="text-muted">Skill&Safari</a>
+                <a href="#" class="text-muted">About</a>
+                <a href="#" class="text-muted">Support</a>
+                <a href="#" class="text-muted">Blog</a>
+            </div>
+            <div class="skill ml-auto text-center ">
+            <h6>&copy;2020 Copyright. Made With <span><i class="fa fa-heart text-danger" aria-hidden="true"></i></span> by <strong class="text-success">Skill & Safari</strong></h6>
+        </div>
+        </div>
+        </div>
+    </div>
+    </footer>
+            
+        
+    
+
+
+
+
+
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script src="js/script.js">
+    </script>
+</body>
+</html>
